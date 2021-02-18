@@ -8,9 +8,9 @@ module.exports = merge(common, {
   mode: 'development',
   devServer: {
     before: function (app, server) {
-      server._watch('./app/**/*.html');
+      server._watch('./src/**/*.html');
     },
-    contentBase: path.join(__dirname, 'app'),
+    contentBase: path.join(__dirname, 'src'),
     hot: true,
     port: 3000,
     host: '0.0.0.0',

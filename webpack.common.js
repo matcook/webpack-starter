@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: './app/assets/scripts/main.js',
+  entry: './src/assets/scripts/main.js',
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'app'),
+    path: path.resolve(__dirname, 'src'),
   },
   module: {
     rules: [
@@ -20,5 +20,4 @@ module.exports = {
     ],
   },
   devtool: 'source-map',
-  target: 'web',
 };
