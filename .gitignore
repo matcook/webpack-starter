@@ -1,5 +1,5 @@
 node_modules/
-app/*.bundled.js
-app/*.bundled.js.map
-app/*.bundled.css
-app/*.bundled.css.map
+app/*.bundle.js
+app/*.bundle.js.map
+app/*.bundle.css
+app/*.bundle.css.map

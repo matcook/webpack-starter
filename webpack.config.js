@@ -3,8 +3,13 @@ const path = require('path');
 module.exports = {
   entry: './app/assets/scripts/main.js',
   output: {
-    filename: '[name].bundled.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'app'),
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'app'),
+    hot: true,
+    port: 3000,
   },
   module: {
     rules: [
@@ -20,4 +25,6 @@ module.exports = {
     ],
   },
   devtool: 'source-map',
+  target: 'web',
+  mode: 'development',
 };
