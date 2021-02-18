@@ -20,4 +20,17 @@ module.exports = merge(common, {
     host: '0.0.0.0',
   },
   target: 'web',
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+      {
+        test: /\.js$/i,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
+  },
 });
