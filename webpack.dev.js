@@ -6,6 +6,10 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'development',
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'src'),
+  },
   devServer: {
     before: function (app, server) {
       server._watch('./src/**/*.html');

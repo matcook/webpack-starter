@@ -1,4 +1,5 @@
 node_modules/
+dist/
 src/*.bundle.js
 src/*.bundle.js.map
 src/*.bundle.css

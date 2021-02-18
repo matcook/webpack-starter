@@ -8,7 +8,7 @@
     "dev": "webpack serve --config webpack.dev.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mathew Cook",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.16",
