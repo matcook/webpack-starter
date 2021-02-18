@@ -6,6 +6,15 @@ const common = require('./webpack.common.js');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const fse = require('fs-extra');
+
+class CopyImages {
+  apply(compiler) {
+    compiler.hooks.done.tap('Copy Images', function () {
+      fse.copySync('./src/assets/images', './dist/assets/images');
+    });
+  }
+}
 
 module.exports = merge(common, {
   mode: 'production',
@@ -22,6 +31,7 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: '[name].[chunkhash].css' }),
+    new CopyImages(),
   ],
   module: {
     rules: [
